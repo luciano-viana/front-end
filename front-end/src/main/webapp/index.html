@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<style type="text/css">
+body {
+	text-transform: uppercase;
+}
+</style>
+</head>
+
+<body>
+	<!-- Mini curso front-end -->
+	<!--table: tabela para alinhar os campos do formulario, tr: linha, td: celula -->
+
+	<!-- onsubmit antes de enviar o formulário irá fazer a validação -->
+	<form action="" onsubmit="return validarDados()? true : false">
+		<table border="0"; style="background: #DCDCDC";>
+			<tr>
+				<td><label>Nome:</label></td>
+				<td><input type="text" id="nome" name="nome"
+					style="border-radius: 5px;"></td>
+			</tr>
+
+			<tr>
+				<td><label>Login</label></td>
+				<td><input type="text" id="login" name="login"
+					style="border-radius: 5px;"></td>
+			</tr>
+
+			<tr>
+				<td><label>Senha:</label></td>
+				<td><input type="password" id="senha" name="senha"
+					style="border-radius: 5px;"></td>
+			</tr>
+
+			<tr>
+				<td />
+				<td><input type="submit" value="Salvar"
+					style="width: 100%; border-radius: 5px; background: #4682B4;"></td>
+			</tr>
+		</table>
+	</form>
+	<!--JavaScript precisa ficar fora do form -->
+	<script type="text/javascript">
+		function validarDados() {
+			var nome = document.getElementById("nome").value;
+			var login = document.getElementById("login").value;
+			var senha = document.getElementById("senha").value;
+			
+			if(nome == ''){
+				alert("Informe o nome!");
+				return false;
+ 			}else if(login == ''){
+				alert("Informe o login!");
+				return false;
+ 			}else if(senha == ''){
+				alert("Informe a senha!");
+				return false;
+ 			}
+			return true;
+			
+			<!--alert(nome)-->
+		}
+	</script>
+
+</body>
+</html>
+
+
+
